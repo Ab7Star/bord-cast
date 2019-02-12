@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "!"
+var prefix = "-As"
 
 
 
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("b!obc")) {
+    if (message.content.startsWith("-Asobc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "!";
+  var prefix = "-As";
 
   client.on("message", message => {
   
@@ -46,7 +46,7 @@ client.on("message", message => {
 
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("b!avatar")) {
+if (message.content.startsWith("-Asavatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
@@ -79,7 +79,7 @@ m.sendMessage(args)
 
   
   client.on('message', msg => {
-    if(msg.content === 'b!help')
+    if(msg.content === '-Ashelp')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
@@ -99,13 +99,13 @@ m.sendMessage(args)
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       !obc | لأرسال برود كاست للكل
+       -Asobc | لأرسال برود كاست للكل
 
-       !bc  |  لأرسال برود كاست للأونلاين
+       -Asbc  |  لأرسال برود كاست للأونلاين
 
-       !invite | لدعوة البوت الي سيرفرك
+       -Asinvite | لدعوة البوت الي سيرفرك
 
-       !support | سيرفر السبورت** `)
+       -Assupport | سيرفر السبورت** `)
    message.author.sendEmbed(embed)
    
    }
@@ -113,10 +113,10 @@ m.sendMessage(args)
 
 
    client.on("message", message => {
-    if (message.content === "!invite") {
+    if (message.content === "-Asinvite") {
      const embed = new Discord.RichEmbed()
          .setColor("RANDOM")
-         .addField('Broadcast', `https://discordapp.com/api/oauth2/authorize?client_id=489960386339274771&permissions=8&scope=bot`)
+         .addField('Broadcast', `https://discordapp.com/api/oauth2/authorize?client_id=544910296893095936&permissions=0&scope=bot`)
      message.author.send({embed});
    
     }
@@ -124,7 +124,7 @@ m.sendMessage(args)
 
 
    client.on("message", message => {
-    if (message.content === "!support") {
+    if (message.content === "-Assupport") {
      const embed = new Discord.RichEmbed()
          .setColor("RANDOM")
          .addField('❤سيرفر الدعم الفني', `  https://discord.gg/SDS4sy  `)
@@ -138,7 +138,7 @@ m.sendMessage(args)
 
 
    client.on('message', message => {
-    if (message.content.startsWith("b!bot")) {
+    if (message.content.startsWith("-Asbot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
@@ -160,7 +160,7 @@ m.sendMessage(args)
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("!help | !invite",{type: 'WATCHING'});
+          client.user.setActivity("-Ashelp | -Asinvite",{type: 'WATCHING'});
   
   });
 
